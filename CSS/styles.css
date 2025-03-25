@@ -707,3 +707,7 @@ footer {
     border-color: #555;
     color: #e0e0e0;
 }
+
+[data-theme="dark"] .social-icon {
+    background-color: #7c45fa;
+}
