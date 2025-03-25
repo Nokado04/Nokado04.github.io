@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="particles-js"></div>
 <header>
     <nav id="navbar">
         <div class="logo">Portfolio</div>
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle" class="switch">
+                <span class="sun"><i class="fas fa-sun"></i></span>
+                <span class="moon"><i class="fas fa-moon"></i></span>
+            </label>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -196,12 +204,18 @@
                 <textarea id="message" placeholder="Your Message" required></textarea>
             </div>
             <button type="submit" class="btn primary">Send Message</button>
+            <p>&copy; 2025 Paul Adrian Pupaza. All rights reserved.</p>
         </form>
     </div>
 </section>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('particles.js loaded');
+    });
+</script>
+<script src="JS/main.js"></script>
+</body>
 
-<footer>
-    <p>&copy; 2025 Paul Adrian Pupaza. All rights reserved.</p>
-</footer>
 
-<script src="../JS/app.js"></script>
+

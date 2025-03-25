@@ -573,3 +573,137 @@ footer {
 .mb-2 {
     margin-bottom: 2rem;
 }
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: var(--light-color);
+}
+
+/* Optional overlay to make content more readable */
+#particles-js::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Theme Toggle Switch */
+.theme-switch {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: var(--light-color);
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+#theme-toggle:checked + .switch::after {
+    left: 32px;
+}
+
+#theme-toggle:checked + .switch {
+    background-color: var(--dark-color);
+}
+
+.sun, .moon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    color: var(--primary-color);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.sun {
+    left: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.moon {
+    right: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#theme-toggle:checked + .switch .sun {
+    opacity: 0;
+}
+
+#theme-toggle:checked + .switch .moon {
+    opacity: 1;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --primary-color: #7c45fa;
+    --secondary-color: #ff8e8e;
+    --dark-color: #f8f9fa;
+    --light-color: #1a1a1a;
+    --text-color: #e0e0e0;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+    color: #f8f9fa;
+}
+
+[data-theme="dark"] #navbar {
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .skill-category,
+[data-theme="dark"] .contact-form {
+    background-color: #2d2d2d;
+}
+
+[data-theme="dark"] .project-tags span {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background-color: #3d3d3d;
+    border-color: #555;
+    color: #e0e0e0;
+}
